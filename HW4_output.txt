@@ -1,0 +1,127 @@
+Testing part A...
+Testing part A1...
+Path "hey"? true
+Path "Hey"? false
+Path "h"? true
+Path "k"? false
+Path "aaa"? false
+Path "hE"? false
+Path "hA"? false
+Path "ha"? true
+Path "@123"? false
+
+Testing part A2...
+Level with most occurrences of 7: 1
+Level with most occurrences of 2: 2
+Level with most occurrences of -1: -1
+Level with most occurrences of 5: 3
+Level with most occurrences of 6: -1
+Level with most occurrences of 0: -1
+
+Testing part B...
+Iteration 1, Counter = 200000
+Iteration 2, Counter = 200000
+Iteration 3, Counter = 200000
+Iteration 4, Counter = 200000
+Iteration 5, Counter = 200000
+Iteration 6, Counter = 200000
+Iteration 7, Counter = 200000
+Iteration 8, Counter = 200000
+Iteration 9, Counter = 200000
+Iteration 10, Counter = 200000
+Iteration 11, Counter = 200000
+Iteration 12, Counter = 200000
+Iteration 13, Counter = 200000
+Iteration 14, Counter = 200000
+Iteration 15, Counter = 200000
+Iteration 16, Counter = 200000
+Iteration 17, Counter = 200000
+Iteration 18, Counter = 200000
+Iteration 19, Counter = 200000
+Iteration 20, Counter = 200000
+Iteration 21, Counter = 200000
+Iteration 22, Counter = 200000
+Iteration 23, Counter = 200000
+Iteration 24, Counter = 200000
+Iteration 25, Counter = 200000
+Iteration 26, Counter = 200000
+Iteration 27, Counter = 200000
+Iteration 28, Counter = 200000
+Iteration 29, Counter = 200000
+Iteration 30, Counter = 200000
+Iteration 31, Counter = 200000
+Iteration 32, Counter = 200000
+Iteration 33, Counter = 200000
+Iteration 34, Counter = 200000
+Iteration 35, Counter = 200000
+Iteration 36, Counter = 200000
+Iteration 37, Counter = 200000
+Iteration 38, Counter = 200000
+Iteration 39, Counter = 200000
+Iteration 40, Counter = 200000
+Iteration 41, Counter = 200000
+Iteration 42, Counter = 200000
+Iteration 43, Counter = 200000
+Iteration 44, Counter = 200000
+Iteration 45, Counter = 200000
+Iteration 46, Counter = 200000
+Iteration 47, Counter = 200000
+Iteration 48, Counter = 200000
+Iteration 49, Counter = 200000
+Iteration 50, Counter = 200000
+Iteration 51, Counter = 200000
+Iteration 52, Counter = 200000
+Iteration 53, Counter = 200000
+Iteration 54, Counter = 200000
+Iteration 55, Counter = 200000
+Iteration 56, Counter = 200000
+Iteration 57, Counter = 200000
+Iteration 58, Counter = 200000
+Iteration 59, Counter = 200000
+Iteration 60, Counter = 200000
+Iteration 61, Counter = 200000
+Iteration 62, Counter = 200000
+Iteration 63, Counter = 200000
+Iteration 64, Counter = 200000
+Iteration 65, Counter = 200000
+Iteration 66, Counter = 200000
+Iteration 67, Counter = 200000
+Iteration 68, Counter = 200000
+Iteration 69, Counter = 200000
+Iteration 70, Counter = 200000
+Iteration 71, Counter = 200000
+Iteration 72, Counter = 200000
+Iteration 73, Counter = 200000
+Iteration 74, Counter = 200000
+Iteration 75, Counter = 200000
+Iteration 76, Counter = 200000
+Iteration 77, Counter = 200000
+Iteration 78, Counter = 200000
+Iteration 79, Counter = 200000
+Iteration 80, Counter = 200000
+Iteration 81, Counter = 200000
+Iteration 82, Counter = 200000
+Iteration 83, Counter = 200000
+Iteration 84, Counter = 200000
+Iteration 85, Counter = 200000
+Iteration 86, Counter = 200000
+Iteration 87, Counter = 200000
+Iteration 88, Counter = 200000
+Iteration 89, Counter = 200000
+Iteration 90, Counter = 200000
+Iteration 91, Counter = 200000
+Iteration 92, Counter = 200000
+Iteration 93, Counter = 200000
+Iteration 94, Counter = 200000
+Iteration 95, Counter = 200000
+Iteration 96, Counter = 200000
+Iteration 97, Counter = 200000
+Iteration 98, Counter = 200000
+Iteration 99, Counter = 200000
+Iteration 100, Counter = 200000
+Cannot release the lock!
+Cannot release the lock!
+Cannot release the lock!
+Locked the lock, now releasing it.
+
+All tests are done!
