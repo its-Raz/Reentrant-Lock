@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="13.1 - all files from moodle including two required classes (only templates no code)">
+    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="FINISH PART 1 BY RAZ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LevelMostOccurrences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelMostOccurrences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IllegalReleaseAttempt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IllegalReleaseAttempt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathFromRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PathFromRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyReentrantLock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "OverrideImplement.generate.javadoc": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -62,7 +62,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673611459336</updated>
       <workItem from="1673611460826" duration="11521000" />
-      <workItem from="1673629474261" duration="5430000" />
+      <workItem from="1673629474261" duration="5582000" />
+      <workItem from="1673638375834" duration="3254000" />
     </task>
     <task id="LOCAL-00001" summary="13.1 - all files from moodle including two required classes (only templates no code)">
       <created>1673614614186</created>
@@ -78,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673614777869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FINISH PART 1 BY RAZ">
+      <created>1673638014057</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673638014057</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="13.1 - all files from moodle including two required classes (only templates no code)" />
-    <option name="LAST_COMMIT_MESSAGE" value="13.1 - all files from moodle including two required classes (only templates no code)" />
+    <MESSAGE value="FINISH PART 1 BY RAZ" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINISH PART 1 BY RAZ" />
   </component>
 </project>
