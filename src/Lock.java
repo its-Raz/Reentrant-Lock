@@ -6,5 +6,5 @@ public interface Lock extends AutoCloseable {
     boolean tryAcquire();
     void release();
 
-    ReentrantLock raz = new ReentrantLock();
+
 }
