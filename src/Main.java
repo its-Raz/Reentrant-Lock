@@ -67,12 +67,12 @@ public class Main {
 
     private static void testPartBOnThread() {
         System.out.println("Testing part B...");
-
+        for (int i = 0; i < 100; i++) {
             Counter.count = 0;
             MyReentrantLock myLock = new MyReentrantLock();
-            Thread t1 = new Thread(new OneAcquireWorker(myLock),"RazSecond");
+            Thread t1 = new Thread(new OneAcquireWorker(myLock));
             t1.start();
-            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock),"RazThird");
+            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock));
             t2.start();
 
             // Wait for the completion of the workers
@@ -81,11 +81,10 @@ public class Main {
                 t2.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                throw new RuntimeException();
-
             }
 
-            System.out.println("Iteration " + (0 + 1) + ", Counter = " + Counter.count);
+            System.out.println("Iteration " + (i + 1) + ", Counter = " + Counter.count);
+        }
 
 
         try {

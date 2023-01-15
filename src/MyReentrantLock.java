@@ -49,9 +49,8 @@ public class MyReentrantLock implements Lock{
         }
         while(!lock.compareAndSet(false,true))
         {
-            System.out.println("First in queue but cant open the lock");
             try{
-            currentThread.sleep(5);}
+            currentThread.sleep(10);}
             catch(Exception e)
             {
                 System.out.println("exception in sleeping");
@@ -106,7 +105,12 @@ public class MyReentrantLock implements Lock{
         if(Thread.currentThread() != owner)
         {
             System.out.println(ownerNumOfLocks + " owner num of locks");
-            System.out.println(owner.getName() + " current owner");
+            if(owner==null)
+            {
+                System.out.println("owner is null");
+            }
+            else{
+            System.out.println(owner.getName() + " current owner");}
             System.out.println("not owner");
             throw new RuntimeException();
         }
@@ -115,10 +119,11 @@ public class MyReentrantLock implements Lock{
             if(ownerNumOfLocks == 0)
             {
                 try{
+                    owner=null;
                  if(lock!=null)   {lock.set(false);} else{
                      System.out.println("lock is null");
                  }
-                owner=null;
+
                 q.pollFirst();
                 }
                 catch (Exception e)
