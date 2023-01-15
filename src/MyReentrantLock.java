@@ -30,30 +30,34 @@ public class MyReentrantLock implements Lock{
      */
     @Override
     public void acquire() {
-        if (Thread.currentThread() == owner) {
+        Thread currentThread = Thread.currentThread();
+        if(owner == currentThread)
+        {
             ownerNumOfLocks++;
-            System.out.println("Owner " + Thread.currentThread().getName() + " is locking key number " +
+            System.out.println("Owner " + owner.getName() + " is locking key number " +
                     lockID + " in the" + ownerNumOfLocks + " time");
-        } else {
-            System.out.println(q.add(Thread.currentThread()));
-            while (q.getFirst()!=Thread.currentThread()) {
-                try{
-                Thread.sleep(100);}
-                catch(Exception e) {
-                    System.out.println("sleep intrupted");
-                }
+            return;
+        }
+        else
+        {
+            q.add(currentThread);
+        while (q.peek()!=currentThread)
+        {
+            try {
+                currentThread.sleep(5000);
             }
-            lock.compareAndSet(false,true);
-                owner = Thread.currentThread();
-                ownerNumOfLocks++;
-                System.out.println(Thread.currentThread() + " IS GETTING OWNER SHIP OF LOCK NUMBER " + this.lockID);
-//            } catch (Exception e) {
-//                System.out.println(Thread.currentThread() + " FAIL TO ACQUIRE LOCK NUMBER " + this.lockID);
-//                owner = null;
-//                lock.set(false);
-//            }
+            catch(InterruptedException e)
+            {
+                System.out.println("Thread " + currentThread.getName() + " wakedUp");
+            }
+        }
+            System.out.println(lock.compareAndSet(false,true) +" THE LOCK LOCKED");
+        owner=currentThread;
+        ownerNumOfLocks=1;
+        System.out.println(Thread.currentThread() + " IS GETTING OWNER SHIP OF LOCK NUMBER " + this.lockID);
         }
     }
+
 
 
 
@@ -98,7 +102,6 @@ public class MyReentrantLock implements Lock{
         {
             System.out.println("not owner");
             throw new RuntimeException();
-
         }
         else{
             ownerNumOfLocks--;
@@ -106,17 +109,17 @@ public class MyReentrantLock implements Lock{
             if(ownerNumOfLocks == 0)
             {
                 try{
-
                 System.out.println(Thread.currentThread() + " IS RELEASING FINALLY " + this);
                 lock.set(false);
-
+                owner=null;
                     System.out.println(q.pollFirst() + " is out of line");
+                    if(q.peek()!=null){
+                   q.peek().interrupt();}
                 }
                 catch (Exception e)
                 {
                     System.out.println("exception in realase");
                     throw new RuntimeException();
-
                 }
 
             }
@@ -136,8 +139,6 @@ public class MyReentrantLock implements Lock{
             System.out.println("exception in close");
             throw new RuntimeException();
             }
-        finally {
-            this.release();
-        }
+
     }
 }
