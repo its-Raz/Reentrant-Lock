@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="200000!!">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="for is working">
       <change beforePath="$PROJECT_DIR$/src/MyReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyReentrantLock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +62,7 @@
       <workItem from="1673629474261" duration="5582000" />
       <workItem from="1673638375834" duration="3254000" />
       <workItem from="1673721967520" duration="10269000" />
-      <workItem from="1673782131300" duration="5761000" />
+      <workItem from="1673782131300" duration="6117000" />
     </task>
     <task id="LOCAL-00001" summary="13.1 - all files from moodle including two required classes (only templates no code)">
       <created>1673614614186</created>
@@ -107,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673787758361</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="for is working">
+      <created>1673788318072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788318072</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +136,8 @@
     <MESSAGE value="some work" />
     <MESSAGE value="200000" />
     <MESSAGE value="200000!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="200000!!" />
+    <MESSAGE value="for is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="for is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

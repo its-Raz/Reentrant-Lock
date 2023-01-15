@@ -20,7 +20,7 @@ public class MyReentrantLock implements Lock{
 //        lockID=lockNum;
         lock = new AtomicBoolean(false);
 //        lockNum++;
-        q = new ArrayDeque<>();
+        q = new ArrayDeque<>(99999);
     }
 
 
