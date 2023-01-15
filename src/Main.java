@@ -135,7 +135,6 @@ abstract class Worker implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 100000; i++) {
-            System.out.println("starting lockAndIncrement in the " + i + " time " + Thread.currentThread().getName());
             lockAndIncrement();
             if (i % 100 == 0) {
                 Thread.yield();  // Give other threads a chance by giving up the current thread's time slice
@@ -151,13 +150,10 @@ class OneAcquireWorker extends Worker {
 
     @Override
     protected void lockAndIncrement() {
-        System.out.println(Thread.currentThread().getName() + " in lockandincrement of OneAcquire");
         try {
             lock.acquire();
             Counter.count++;
-            System.out.println(Thread.currentThread().getName() +"counted");
         } finally {
-            System.out.println(Thread.currentThread().getName() + "is about to call release");
             lock.release();
         }
     }
@@ -171,14 +167,11 @@ class TryWithResourcesAcquireWorker extends Worker {
 
     @Override
     protected void lockAndIncrement() {
-        System.out.println(Thread.currentThread().getName() + " in lockAndIncrement TryWithResoruces");
         try (lock) {
-            System.out.println(Thread.currentThread().getName() + " in try with r block, the current owner is ");
             lock.acquire();
             try {
                 lock.acquire();
                 Counter.count++;
-                System.out.println(Thread.currentThread().getName() +"counted in trywithresources");
             } finally {
                 lock.release();
             }
