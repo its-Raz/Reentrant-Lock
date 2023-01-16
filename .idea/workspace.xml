@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="part B finish!!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LevelMostOccurrences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelMostOccurrences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="all finish" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +62,7 @@
       <workItem from="1673721967520" duration="10269000" />
       <workItem from="1673782131300" duration="6290000" />
       <workItem from="1673801125308" duration="559000" />
-      <workItem from="1673854286269" duration="7738000" />
+      <workItem from="1673854286269" duration="8097000" />
     </task>
     <task id="LOCAL-00001" summary="13.1 - all files from moodle including two required classes (only templates no code)">
       <created>1673614614186</created>
@@ -138,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673860720926</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="all finish">
+      <created>1673862173685</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673862173685</updated>
+    </task>
+    <task id="LOCAL-00012" summary="all finish">
+      <created>1673862335845</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673862335845</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +175,8 @@
     <MESSAGE value="for is working but really" />
     <MESSAGE value="for loop working part two" />
     <MESSAGE value="part B finish!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="part B finish!!" />
+    <MESSAGE value="all finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="all finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
