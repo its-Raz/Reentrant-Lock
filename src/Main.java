@@ -2,9 +2,7 @@ public class Main {
     public static void main(String[] args) {
 //        testPartA();
         testPartB();
-//        System.out.println("\nAll tests are done!");
-
-
+        System.out.println("\nAll tests are done!");
     }
 
     private static void testPartA() {
@@ -28,10 +26,8 @@ public class Main {
             System.out.println("Path \"" + input + "\"? " + result);
         }
 
-        }
-
-
-
+        System.out.println();
+    }
 
     private static void testPartA2() {
         System.out.println("Testing part A2...");
@@ -41,7 +37,7 @@ public class Main {
         root.getLeft().setLeft(new BinNode<>(7, new BinNode<>(5), null));
         root.getLeft().setRight(new BinNode<>(2, new BinNode<>(9), new BinNode<>(5)));
 
-        int[] inputs = {7, 2, -1, 5, 6, 0,};
+        int[] inputs = {7, 2, -1, 5, 6, 0};
 
         for (int input : inputs) {
             int result = LevelMostOccurrences.getLevelWithMostOccurrences(root, input);
@@ -52,17 +48,17 @@ public class Main {
     }
 
     private static void testPartB() {
-        Thread t = new Thread(Main::testPartBOnThread,"RazBig");
+        Thread t = new Thread(Main::testPartBOnThread,"BIG THREAD");
         t.start();
 //        try {
 //            t.join(5000);  // Wait at most 5 seconds
 //        } catch (InterruptedException e) {
 //        }
 //
-////        if (t.isAlive()) {  // Timeout
-////            System.out.println("Timout occurred while testing part B...");
-////            t.stop();
-////        }
+//        if (t.isAlive()) {  // Timeout
+//            System.out.println("Timout occurred while testing part B...");
+//            t.stop();
+//        }
     }
 
     private static void testPartBOnThread() {
@@ -70,9 +66,9 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             Counter.count = 0;
             MyReentrantLock myLock = new MyReentrantLock();
-            Thread t1 = new Thread(new OneAcquireWorker(myLock));
+            Thread t1 = new Thread(new OneAcquireWorker(myLock),"RAZ1");
             t1.start();
-            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock));
+            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock),"RAZ2");
             t2.start();
 
             // Wait for the completion of the workers
@@ -86,34 +82,33 @@ public class Main {
             System.out.println("Iteration " + (i + 1) + ", Counter = " + Counter.count);
         }
 
+//        try {
+//            Lock lock = new MyReentrantLock();
+//            lock.release();
+//        } catch (IllegalReleaseAttempt e) {
+//            System.out.println("Cannot release the lock!");
+//        }
 
-        try {
-            Lock lock = new MyReentrantLock();
-            lock.release();
-        } catch (IllegalReleaseAttempt e) {
-            System.out.println("Cannot release the lock!");
-        }
+//        try {
+//            Lock lock = new MyReentrantLock();
+//            lock.release();
+//        } catch (IllegalMonitorStateException e) {
+//            System.out.println("Cannot release the lock!");
+//        }
 
-        try {
-            Lock lock = new MyReentrantLock();
-            lock.release();
-        } catch (IllegalMonitorStateException e) {
-            System.out.println("Cannot release the lock!");
-        }
+//        try (MyReentrantLock lock = new MyReentrantLock()) {
+//        } catch (IllegalReleaseAttempt e) {
+//            System.out.println("Cannot release the lock!");
+//        }
 
-        try (MyReentrantLock lock = new MyReentrantLock()) {
-        } catch (IllegalReleaseAttempt e) {
-            System.out.println("Cannot release the lock!");
-        }
-
-        Lock lock = new MyReentrantLock();
-        boolean result = lock.tryAcquire();
-        if (result) {
-            System.out.println("Locked the lock, now releasing it.");
-            lock.release();
-        } else {
-            System.out.println("You should not reach here!");
-        }
+//        Lock lock = new MyReentrantLock();
+//        boolean result = lock.tryAcquire();
+//        if (result) {
+//            System.out.println("Locked the lock, now releasing it.");
+//            lock.release();
+//        } else {
+//            System.out.println("You should not reach here!");
+//        }
     }
 }
 
@@ -175,6 +170,5 @@ class TryWithResourcesAcquireWorker extends Worker {
                 lock.release();
             }
         }
-        //Auto release of the lock by its AutoCloseable (close()) implementation.
     }
 }
