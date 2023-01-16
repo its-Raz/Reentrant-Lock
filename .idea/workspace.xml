@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="for is working but really">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="493f5050-235b-4555-848f-a36b9ee6e22b" name="Changes" comment="for loop working part two">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyReentrantLock.java" afterDir="false" />
     </list>
@@ -66,7 +65,7 @@
       <workItem from="1673721967520" duration="10269000" />
       <workItem from="1673782131300" duration="6290000" />
       <workItem from="1673801125308" duration="559000" />
-      <workItem from="1673854286269" duration="5781000" />
+      <workItem from="1673854286269" duration="6232000" />
     </task>
     <task id="LOCAL-00001" summary="13.1 - all files from moodle including two required classes (only templates no code)">
       <created>1673614614186</created>
@@ -124,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673788495160</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="for loop working part two">
+      <created>1673860363467</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673860363467</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +155,8 @@
     <MESSAGE value="200000!!" />
     <MESSAGE value="for is working" />
     <MESSAGE value="for is working but really" />
-    <option name="LAST_COMMIT_MESSAGE" value="for is working but really" />
+    <MESSAGE value="for loop working part two" />
+    <option name="LAST_COMMIT_MESSAGE" value="for loop working part two" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

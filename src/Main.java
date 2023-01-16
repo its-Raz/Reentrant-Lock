@@ -50,15 +50,15 @@ public class Main {
     private static void testPartB() {
         Thread t = new Thread(Main::testPartBOnThread,"BIG THREAD");
         t.start();
-//        try {
-//            t.join(5000);  // Wait at most 5 seconds
-//        } catch (InterruptedException e) {
-//        }
-//
-//        if (t.isAlive()) {  // Timeout
-//            System.out.println("Timout occurred while testing part B...");
-//            t.stop();
-//        }
+        try {
+            t.join(5000);  // Wait at most 5 seconds
+        } catch (InterruptedException e) {
+        }
+
+        if (t.isAlive()) {  // Timeout
+            System.out.println("Timout occurred while testing part B...");
+            t.stop();
+        }
     }
 
     private static void testPartBOnThread() {
@@ -82,33 +82,33 @@ public class Main {
             System.out.println("Iteration " + (i + 1) + ", Counter = " + Counter.count);
         }
 
-//        try {
-//            Lock lock = new MyReentrantLock();
-//            lock.release();
-//        } catch (IllegalReleaseAttempt e) {
-//            System.out.println("Cannot release the lock!");
-//        }
+        try {
+            Lock lock = new MyReentrantLock();
+            lock.release();
+        } catch (IllegalReleaseAttempt e) {
+            System.out.println("Cannot release the lock!");
+        }
 
-//        try {
-//            Lock lock = new MyReentrantLock();
-//            lock.release();
-//        } catch (IllegalMonitorStateException e) {
-//            System.out.println("Cannot release the lock!");
-//        }
+        try {
+            Lock lock = new MyReentrantLock();
+            lock.release();
+        } catch (IllegalMonitorStateException e) {
+            System.out.println("Cannot release the lock!");
+        }
 
-//        try (MyReentrantLock lock = new MyReentrantLock()) {
-//        } catch (IllegalReleaseAttempt e) {
-//            System.out.println("Cannot release the lock!");
-//        }
+        try (MyReentrantLock lock = new MyReentrantLock()) {
+        } catch (IllegalReleaseAttempt e) {
+            System.out.println("Cannot release the lock!");
+        }
 
-//        Lock lock = new MyReentrantLock();
-//        boolean result = lock.tryAcquire();
-//        if (result) {
-//            System.out.println("Locked the lock, now releasing it.");
-//            lock.release();
-//        } else {
-//            System.out.println("You should not reach here!");
-//        }
+        Lock lock = new MyReentrantLock();
+        boolean result = lock.tryAcquire();
+        if (result) {
+            System.out.println("Locked the lock, now releasing it.");
+            lock.release();
+        } else {
+            System.out.println("You should not reach here!");
+        }
     }
 }
 

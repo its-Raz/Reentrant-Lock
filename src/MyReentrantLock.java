@@ -60,7 +60,18 @@ public class MyReentrantLock implements Lock
      * @return
      */
     @Override
-    public boolean tryAcquire() {
+    public boolean tryAcquire()
+    {
+        Thread currentThread = Thread.currentThread();
+        if(lock.compareAndSet(false,true))
+        {
+            ownerNumOfLocks=1;
+            owner = currentThread;
+            return true;
+        } else if (owner == currentThread) {
+            ownerNumOfLocks++;
+            return true;
+        }
         return false;
     }
 
