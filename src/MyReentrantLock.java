@@ -9,18 +9,17 @@ public class MyReentrantLock implements Lock{
     public int ownerNumOfLocks;
     public ArrayDeque<Thread> threadsQueue;
 
-
-
-
+    /**
+     * constructor
+     */
     public MyReentrantLock()
     {
         lock = new AtomicBoolean(false);
         threadsQueue = new ArrayDeque<>(999999);
     }
 
-
     /**
-     *
+     *locks the lock. if the lock is locked, the method waits until the lock is released
      */
     @Override
     public void acquire() {
@@ -44,7 +43,7 @@ public class MyReentrantLock implements Lock{
             while(!lock.compareAndSet(false,true))
             {
                 try{
-                    currentThread.sleep(10);}
+                    currentThread.sleep(5);}
                 catch(Exception e)
                 {
                 }
@@ -55,9 +54,9 @@ public class MyReentrantLock implements Lock{
         }
     }
 
-
     /**
-     * @return
+     * tries to lock the lock
+     * @return true if succeeded to lock, otherwise false
      */
     @Override
     public boolean tryAcquire() {
@@ -76,7 +75,8 @@ public class MyReentrantLock implements Lock{
     }
 
     /**
-     *
+     *releases the lock
+     * @throws IllegalReleaseAttempt exception
      */
     @Override
     public void release() {
@@ -98,7 +98,7 @@ public class MyReentrantLock implements Lock{
     }
 
     /**
-
+     *automatic release of the lock
      */
     @Override
     public void close()  {

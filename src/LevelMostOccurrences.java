@@ -1,6 +1,10 @@
 import java.util.ArrayDeque;
 
 public class LevelMostOccurrences {
+    /**
+     * checks which level has the most occurrences of a number that is given
+     * @return the number of level that has the most occurrences of a number that is given, otherwise -1
+     */
     public static int getLevelWithMostOccurrences(BinNode<Integer> root, int num) {
         int maxAppearance = 0;
         int maxLevel=-1;
@@ -38,4 +42,3 @@ public class LevelMostOccurrences {
         return maxLevel;
     }
 }
-/**/

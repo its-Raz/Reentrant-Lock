@@ -1,4 +1,8 @@
 public class PathFromRoot {
+    /**
+     * checks if there is a path that begins at the root of the tree for a string that is given
+     * @return true if there is a path, otherwise false
+     */
     public static boolean doesPathExist(BinNode<Character> root, String str) {
         if(str.length() == 0) { return true;}
         else if (root!=null) {
@@ -11,4 +15,3 @@ public class PathFromRoot {
         return false;
     }
 }
-/**/
