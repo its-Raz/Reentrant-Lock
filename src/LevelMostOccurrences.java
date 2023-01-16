@@ -14,7 +14,6 @@ public class LevelMostOccurrences {
         q1.add(root);
         while(!q1.isEmpty())
         {
-
             for(BinNode node : q1)
             {
                 if(node.getData().equals((Integer)num))
