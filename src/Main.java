@@ -48,7 +48,7 @@ public class Main {
     }
 
     private static void testPartB() {
-        Thread t = new Thread(Main::testPartBOnThread,"BIG THREAD");
+        Thread t = new Thread(Main::testPartBOnThread);
         t.start();
         try {
             t.join(5000);  // Wait at most 5 seconds
@@ -66,9 +66,9 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             Counter.count = 0;
             MyReentrantLock myLock = new MyReentrantLock();
-            Thread t1 = new Thread(new OneAcquireWorker(myLock),"RAZ1");
+            Thread t1 = new Thread(new OneAcquireWorker(myLock));
             t1.start();
-            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock),"RAZ2");
+            Thread t2 = new Thread(new TryWithResourcesAcquireWorker(myLock));
             t2.start();
 
             // Wait for the completion of the workers
@@ -172,4 +172,3 @@ class TryWithResourcesAcquireWorker extends Worker {
         }
     }
 }
-/**/

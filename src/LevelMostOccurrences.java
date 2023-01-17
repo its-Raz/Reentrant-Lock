@@ -3,6 +3,10 @@ import java.util.ArrayDeque;
 public class LevelMostOccurrences {
     /**
      * checks which level has the most occurrences of a number that is given
+     * there is a 'big queue' that contains two queues(q1,q2), q1 add the current level child to q2 and then
+     * count the number of the input number appearances in the current level.
+     * @param root - the root of the tree that from it, we reached the whole tree.
+     * @param num - the number that we check in what level of the tree there are the most occurrences
      * @return the number of level that has the most occurrences of a number that is given, otherwise -1
      */
     public static int getLevelWithMostOccurrences(BinNode<Integer> root, int num) {

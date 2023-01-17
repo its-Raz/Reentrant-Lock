@@ -1,5 +1,4 @@
 public class BinNode<E> {
-    /**/
     private E data;
     private BinNode<E> left;
     private BinNode<E> right;

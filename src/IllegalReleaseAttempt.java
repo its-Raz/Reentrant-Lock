@@ -1,13 +1,13 @@
 public class IllegalReleaseAttempt extends IllegalMonitorStateException{
     /**
-     * Constructs an <code>IllegalMonitorStateException</code> with no
+     * Constructs an IllegalReleaseAttempt with no
      * detail message.
      */
     public IllegalReleaseAttempt() {
     }
 
     /**
-     * Constructs an <code>IllegalMonitorStateException</code> with the
+     * Constructs an IllegalReleaseAttempt with the
      * specified detail message.
      *
      * @param s the detail message.
@@ -16,4 +16,3 @@ public class IllegalReleaseAttempt extends IllegalMonitorStateException{
         super(s);
     }
 }
-/**/
